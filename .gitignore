@@ -1,0 +1,8 @@
+*.suo
+bin/
+obj/
+*.resharper.*
+*.hbm.xml
+*.bak
+_ReSharper*
+*.ReSharper.user
