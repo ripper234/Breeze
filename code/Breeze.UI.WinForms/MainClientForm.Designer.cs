@@ -1,6 +1,6 @@
 ﻿namespace Breeze.UI.WinForms
 {
-    partial class Form1
+    partial class MainClientForm
     {
         /// <summary>
         /// Required designer variable.
@@ -38,6 +38,9 @@
             this.savedReplayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.MainPanel = new System.Windows.Forms.Panel();
+            this.demoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.connectedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,7 +49,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gameToolStripMenuItem,
             this.viewToolStripMenuItem,
-            this.helpToolStripMenuItem});
+            this.helpToolStripMenuItem,
+            this.demoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(467, 24);
@@ -68,6 +72,7 @@
             this.connectToolStripMenuItem.Name = "connectToolStripMenuItem";
             this.connectToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.connectToolStripMenuItem.Text = "&Connect";
+            this.connectToolStripMenuItem.Click += new System.EventHandler(this.connectToolStripMenuItem_Click);
             // 
             // hostToolStripMenuItem
             // 
@@ -93,13 +98,13 @@
             // cardsToolStripMenuItem
             // 
             this.cardsToolStripMenuItem.Name = "cardsToolStripMenuItem";
-            this.cardsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cardsToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.cardsToolStripMenuItem.Text = "&Cards";
             // 
             // savedReplayToolStripMenuItem
             // 
             this.savedReplayToolStripMenuItem.Name = "savedReplayToolStripMenuItem";
-            this.savedReplayToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.savedReplayToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.savedReplayToolStripMenuItem.Text = "Saved &Replay";
             // 
             // helpToolStripMenuItem
@@ -113,17 +118,40 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.aboutToolStripMenuItem.Text = "&About";
             // 
-            // Form1
+            // MainPanel
+            // 
+            this.MainPanel.Location = new System.Drawing.Point(0, 27);
+            this.MainPanel.Name = "MainPanel";
+            this.MainPanel.Size = new System.Drawing.Size(467, 295);
+            this.MainPanel.TabIndex = 1;
+            // 
+            // demoToolStripMenuItem
+            // 
+            this.demoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.connectedToolStripMenuItem});
+            this.demoToolStripMenuItem.Name = "demoToolStripMenuItem";
+            this.demoToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
+            this.demoToolStripMenuItem.Text = "&Demo";
+            // 
+            // connectedToolStripMenuItem
+            // 
+            this.connectedToolStripMenuItem.Name = "connectedToolStripMenuItem";
+            this.connectedToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.connectedToolStripMenuItem.Text = "&Connected";
+            this.connectedToolStripMenuItem.Click += new System.EventHandler(this.connectedToolStripMenuItem_Click);
+            // 
+            // MainClientForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(467, 318);
+            this.Controls.Add(this.MainPanel);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Form1";
+            this.Name = "MainClientForm";
             this.Text = "Breeze";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -144,6 +172,9 @@
         private System.Windows.Forms.ToolStripMenuItem savedReplayToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.Panel MainPanel;
+        private System.Windows.Forms.ToolStripMenuItem demoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem connectedToolStripMenuItem;
     }
 }
 
