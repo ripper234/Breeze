@@ -1,15 +1,15 @@
 using System.Collections.Generic;
 using System.Linq;
-using Breeze.Common.Model;
+using Breeze.Model.DataObjects;
 
 namespace Breeze.Model.Dtos
 {
     public class PlayersDto
     {
         public List<PlayerDto> Players { get; set; }
-        public PlayersDto(PlayersData playersData)
+        public PlayersDto(IEnumerable<PlayerData> playersData)
         {
-            Players = (from p in playersData.Players select new PlayerDto(p)).ToList();
+            Players = (from p in playersData select new PlayerDto(p)).ToList();
         }
     }
 }

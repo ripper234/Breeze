@@ -1,4 +1,5 @@
-﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+﻿<%@ Import Namespace="Breeze.UI.Web.Utils"%>
+<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -8,6 +9,7 @@
     <link href="../../Content/Site.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="../../Scripts/lib/jquery-1.4.2.min.js"></script>
     
+    <script type="text/javascript" src="../../Scripts/ping.js"></script>
     <asp:ContentPlaceHolder ID="HeadContent" runat="server"/>
 </head>
 
@@ -40,5 +42,11 @@
             </div>
         </div>
     </div>
+    
+    <fieldset>
+        <%= "<input id='playerid' type='hidden' value='"
+                + Session[SessionConsts.PlayerID]
+ 	            + "' />" %>
+    </fieldset>
 </body>
 </html>

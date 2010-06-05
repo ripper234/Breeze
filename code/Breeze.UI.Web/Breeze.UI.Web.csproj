@@ -119,6 +119,7 @@
     <Content Include="Scripts\lib\MicrosoftMvcValidation.js" />
     <Content Include="Scripts\lib\openid-jquery.js" />
     <Content Include="Scripts\lib\showdown.js" />
+    <Content Include="Scripts\ping.js" />
     <Content Include="Views\Lobby\Index.aspx" />
     <Content Include="Web.config" />
     <Content Include="Content\Site.css" />

@@ -1,4 +1,4 @@
-using Breeze.Common;
+using Breeze.Model.DataObjects;
 
 namespace Breeze.Model.Dtos
 {

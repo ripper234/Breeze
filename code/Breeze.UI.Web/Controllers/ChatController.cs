@@ -18,5 +18,10 @@ namespace Breeze.UI.Web.Controllers
             return Json(new PlayersDto(_playersService.GetPlayersInLobby()));
         }
 
+        [HttpPost]
+        public void Ping(int playerId)
+        {
+            _playersService.PingReceived(playerId);
+        }
     }
 }
