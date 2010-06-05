@@ -3,7 +3,7 @@
 namespace Breeze.UI.Web.Controllers
 {
     [HandleError]
-    public class HomeController : Controller
+    public class HomeController : BreezeControllerBase
     {
         public ActionResult Index()
         {

@@ -74,6 +74,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BreezeControllerBase.cs" />
+    <Compile Include="Controllers\ChatController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LobbyController.cs" />
     <Compile Include="Global.asax.cs">
@@ -86,23 +88,40 @@
   <ItemGroup>
     <Content Include="castle.xml" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\chat.js" />
+    <Content Include="Scripts\lib\jquery-1.4.2.min.js" />
+    <Content Include="Scripts\lib\jquery-ui\cupertino\images\ui-bg_diagonals-thick_90_eeeeee_40x40.png" />
+    <Content Include="Scripts\lib\jquery-ui\cupertino\images\ui-bg_flat_15_cd0a0a_40x100.png" />
+    <Content Include="Scripts\lib\jquery-ui\cupertino\images\ui-bg_glass_100_e4f1fb_1x400.png" />
+    <Content Include="Scripts\lib\jquery-ui\cupertino\images\ui-bg_glass_50_3baae3_1x400.png" />
+    <Content Include="Scripts\lib\jquery-ui\cupertino\images\ui-bg_glass_80_d7ebf9_1x400.png" />
+    <Content Include="Scripts\lib\jquery-ui\cupertino\images\ui-bg_highlight-hard_100_f2f5f7_1x100.png" />
+    <Content Include="Scripts\lib\jquery-ui\cupertino\images\ui-bg_highlight-hard_70_000000_1x100.png" />
+    <Content Include="Scripts\lib\jquery-ui\cupertino\images\ui-bg_highlight-soft_100_deedf7_1x100.png" />
+    <Content Include="Scripts\lib\jquery-ui\cupertino\images\ui-bg_highlight-soft_25_ffef8f_1x100.png" />
+    <Content Include="Scripts\lib\jquery-ui\cupertino\images\ui-icons_2694e8_256x240.png" />
+    <Content Include="Scripts\lib\jquery-ui\cupertino\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Scripts\lib\jquery-ui\cupertino\images\ui-icons_3d80b3_256x240.png" />
+    <Content Include="Scripts\lib\jquery-ui\cupertino\images\ui-icons_72a7cf_256x240.png" />
+    <Content Include="Scripts\lib\jquery-ui\cupertino\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Scripts\lib\jquery-ui\cupertino\jquery-ui-1.8.1.custom.css" />
+    <Content Include="Scripts\lib\jquery.jeditable.mini.js" />
+    <Content Include="Scripts\lib\jquery.rule.js" />
+    <Content Include="Scripts\lib\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\lib\jquery.validate.js" />
+    <Content Include="Scripts\lib\jquery.validate.min-vsdoc.js" />
+    <Content Include="Scripts\lib\jquery.validate.min.js" />
+    <Content Include="Scripts\lib\MicrosoftAjax.debug.js" />
+    <Content Include="Scripts\lib\MicrosoftAjax.js" />
+    <Content Include="Scripts\lib\MicrosoftMvcAjax.debug.js" />
+    <Content Include="Scripts\lib\MicrosoftMvcAjax.js" />
+    <Content Include="Scripts\lib\MicrosoftMvcValidation.debug.js" />
+    <Content Include="Scripts\lib\MicrosoftMvcValidation.js" />
+    <Content Include="Scripts\lib\openid-jquery.js" />
+    <Content Include="Scripts\lib\showdown.js" />
     <Content Include="Views\Lobby\Index.aspx" />
     <Content Include="Web.config" />
     <Content Include="Content\Site.css" />
-    <Content Include="Scripts\jquery-1.4.1.js" />
-    <Content Include="Scripts\jquery-1.4.1.min.js" />
-    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
-    <Content Include="Scripts\jquery-1.4.1.min-vsdoc.js" />
-    <Content Include="Scripts\jquery.validate.js" />
-    <Content Include="Scripts\jquery.validate.min.js" />
-    <Content Include="Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="Scripts\jquery.validate.min-vsdoc.js" />
-    <Content Include="Scripts\MicrosoftAjax.js" />
-    <Content Include="Scripts\MicrosoftAjax.debug.js" />
-    <Content Include="Scripts\MicrosoftMvcAjax.js" />
-    <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
-    <Content Include="Scripts\MicrosoftMvcValidation.js" />
-    <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
     <Content Include="Views\Account\ChangePassword.aspx" />
     <Content Include="Views\Account\ChangePasswordSuccess.aspx" />
     <Content Include="Views\Account\LogOn.aspx" />
@@ -122,6 +141,10 @@
     <ProjectReference Include="..\Breeze.Core\Breeze.Core.csproj">
       <Project>{4FFC41D9-5B2A-4347-A2B5-CFB8118544DC}</Project>
       <Name>Breeze.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Breeze.Model\Breeze.Model.csproj">
+      <Project>{470783C1-3522-4A3F-A874-1B49B8E67E39}</Project>
+      <Name>Breeze.Model</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

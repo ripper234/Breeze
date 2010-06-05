@@ -9,7 +9,6 @@ using System.Web.Mvc;
 using Castle.Core;
 using Castle.MicroKernel.Registration;
 using Castle.Windsor;
-using Kuzando.Common.IoC;
 
 #endregion
 

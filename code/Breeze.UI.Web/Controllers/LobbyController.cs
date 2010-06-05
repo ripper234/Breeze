@@ -3,7 +3,7 @@ using Breeze.Core.Services;
 
 namespace Breeze.UI.Web.Controllers
 {
-    public class LobbyController : Controller
+    public class LobbyController : BreezeControllerBase
     {
         private readonly IPlayersService _playersService;
 

@@ -5,7 +5,7 @@ using Castle.Core;
 
 #endregion
 
-namespace Kuzando.Common.IoC
+namespace Breeze.Common.IoC
 {
     /// <summary>
     ///   Specifying hints for container registration.

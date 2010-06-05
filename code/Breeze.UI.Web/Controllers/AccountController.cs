@@ -5,7 +5,7 @@ using Breeze.UI.Web.Utils;
 
 namespace Breeze.UI.Web.Controllers
 {
-    public class AccountController : Controller
+    public class AccountController : BreezeControllerBase
     {
         private readonly IPlayersService _playersService;
 
