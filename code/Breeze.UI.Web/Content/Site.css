@@ -12,7 +12,10 @@ body
     padding: 0;
     color: #696969;
 }
-
+body *
+{
+    vertical-align:top;	
+}
 a:link
 {
     color: #034af3;
@@ -341,4 +344,27 @@ div#title
 .tri-state
 {
     width: 6em;
+}
+
+
+/** My additions start here */
+
+#chatmain
+{
+	height:300px;
+	width:800px;
+	border-style:solid;
+}
+#playerslistbox
+{
+}
+#playerslistbox
+{
+}
+#playerslistboxtitle
+{	
+}
+#chattable
+{
+	border-width:medium;
 }

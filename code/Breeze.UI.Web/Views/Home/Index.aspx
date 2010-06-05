@@ -7,10 +7,10 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <h2>To start, choose a nick:</h2>
     
-    <form action="/Account/ChooseNick">
+    <form action="/Account/ChooseNick" >
         <fieldset>
         <input type="text" name="nickname"/>
-        <input type="button" name="submit"/>
+        <input type="submit" name="submit" value="Choose"/>
         </fieldset>
     </form>
 </asp:Content>
