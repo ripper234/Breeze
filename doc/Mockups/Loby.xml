@@ -1,0 +1,53 @@
+<mockup version="1.0" skin="sketch" measuredW="1372" measuredH="2165" mockupW="1345" mockupH="2128">
+  <controls>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::TabBar" x="24" y="27" w="680" h="433" measuredW="164" measuredH="100" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <selectedIndex>0</selectedIndex>
+        <tabVPosition>top</tabVPosition>
+        <text>Loby%2C</text>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::DataGrid" x="92" y="65" w="-1" h="-1" measuredW="605" measuredH="88" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Boosters%2C%20Title%2C%20Organizer%2C%20Pick%20Time%2C%20Players%2C%20Started%2C%20Progress%0ARRR%2C%20Rise%20of%20Eldrazi%20X%203%2C%20rippe234%2C%2075%20secs%2C%208/8%2C%20V%2C%2070%25%0ARRR%2C%20Rise%20of%20Eldrazi%20X%203%2C%20Avish%2C%2060%20secs%2C%20League%20Only%2C%204/8</text>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::Button" x="33" y="88" w="-1" h="-1" measuredW="49" measuredH="28" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Join</text>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::Button" x="33" y="125" w="-1" h="-1" measuredW="49" measuredH="28" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Join</text>
+      </controlProperties>
+    </control>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::TextInput" x="39" y="416" w="494" h="-1" measuredW="394" measuredH="29" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Well%2C%20I%20liking%20the%20Queue%20system%2C%20it%27s%20much%20easier%20to%20use%20...</text>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::List" x="548" y="225" w="124" h="161" measuredW="100" measuredH="147" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>ripper234%0AAvish%0Achaoticdawn%0ACrazed%20Goblin%0ACool%20Shade%0AThe%20Boss%0AKozilek</text>
+      </controlProperties>
+    </control>
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::Label" x="548" y="192" w="-1" h="-1" measuredW="95" measuredH="25" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Players%20Online</text>
+      </controlProperties>
+    </control>
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::VerticalScrollBar" x="656" y="228" w="-1" h="158" measuredW="16" measuredH="100" zOrder="9" locked="false" isInGroup="-1"/>
+    <control controlID="14" controlTypeID="com.balsamiq.mockups::Button" x="33" y="159" w="59" h="28" measuredW="66" measuredH="28" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Create</text>
+      </controlProperties>
+    </control>
+    <control controlID="58" controlTypeID="com.balsamiq.mockups::TextArea" x="33" y="192" w="500" h="209" measuredW="200" measuredH="140" zOrder="37" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>*%20Cool%20Shade%20just%20joined%20Rise%20of%20Eldrazi%20X%203%0A*%20Crazed%20Goblin%20just%20entered%20the%20loby%0A%3Cripper234%3E%20So%2C%20what%20do%20you%20think%20of%20this%20website%3F%0A%3CAvish%3E%20We%20just%20launched%20it%20yesterday</text>
+      </controlProperties>
+    </control>
+    <control controlID="59" controlTypeID="com.balsamiq.mockups::VerticalScrollBar" x="517" y="192" w="-1" h="209" measuredW="16" measuredH="100" zOrder="38" locked="false" isInGroup="-1"/>
+  </controls>
+</mockup>
