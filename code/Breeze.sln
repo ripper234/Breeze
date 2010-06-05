@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Breeze.Common", "Breeze.Com
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Breeze.UI.Web", "Breeze.UI.Web\Breeze.UI.Web.csproj", "{B2BB77FF-CD77-4706-9B06-8413227975AB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Breeze.Core", "Breeze.Core\Breeze.Core.csproj", "{4FFC41D9-5B2A-4347-A2B5-CFB8118544DC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{B2BB77FF-CD77-4706-9B06-8413227975AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B2BB77FF-CD77-4706-9B06-8413227975AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B2BB77FF-CD77-4706-9B06-8413227975AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FFC41D9-5B2A-4347-A2B5-CFB8118544DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FFC41D9-5B2A-4347-A2B5-CFB8118544DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FFC41D9-5B2A-4347-A2B5-CFB8118544DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FFC41D9-5B2A-4347-A2B5-CFB8118544DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

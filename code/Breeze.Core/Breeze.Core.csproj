@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{3E6E00D3-02E2-4E49-900E-7872A4E4C06D}</ProjectGuid>
+    <ProjectGuid>{4FFC41D9-5B2A-4347-A2B5-CFB8118544DC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Breeze.Common</RootNamespace>
-    <AssemblyName>Breeze.Common</AssemblyName>
+    <RootNamespace>Breeze.Core</RootNamespace>
+    <AssemblyName>Breeze.Core</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -47,14 +47,6 @@
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
-    <Reference Include="System.Web" />
-    <Reference Include="System.Web.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Lib\MVC\System.Web.Mvc.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Routing">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
     <Reference Include="System.Xml.Linq">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
@@ -65,16 +57,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IoC\AutoWireServicesExtensions.cs" />
-    <Compile Include="IoC\ImplementedByAttribute.cs" />
-    <Compile Include="Model\PlayerData.cs" />
-    <Compile Include="Model\PlayersData.cs" />
+    <Compile Include="Bootstrap\Bootstrapper.cs" />
+    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Web\EmptyModel.cs" />
-    <Compile Include="Web\ItemModel.cs" />
-    <Compile Include="Web\ItemsModel.cs" />
-    <Compile Include="Web\ModelBase.cs" />
-    <Compile Include="Web\WindsorControllerFactory.cs" />
+    <Compile Include="Services\IPlayersService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Breeze.Common\Breeze.Common.csproj">
+      <Project>{3E6E00D3-02E2-4E49-900E-7872A4E4C06D}</Project>
+      <Name>Breeze.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
