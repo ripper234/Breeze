@@ -9,5 +9,6 @@ namespace Breeze.Core.Services
         ICollection<PlayerData> GetPlayersInLobby();
         PlayersData GetPlayersInDraft(int draftId);
         void PingReceived(int id);
+        PlayerData Get(int id);
     }
 }

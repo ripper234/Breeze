@@ -7,10 +7,12 @@ namespace Breeze.UI.Web.Controllers
     public class ChatController : BreezeControllerBase
     {
         private readonly IPlayersService _playersService;
+        private readonly IChatService _chatService;
 
-        public ChatController(IPlayersService playersService)
+        public ChatController(IPlayersService playersService, IChatService chatService)
         {
             _playersService = playersService;
+            _chatService = chatService;
         }
 
         public JsonResult GetPlayersInLobby()
@@ -19,9 +21,22 @@ namespace Breeze.UI.Web.Controllers
         }
 
         [HttpPost]
-        public void Ping(int playerId)
+        public void SendMessage(int playerId, string text)
+        {
+            var player = _playersService.Get(playerId);
+            if (player == null)
+            {
+                // non-existent player
+                return;
+            }
+
+            _chatService.SendMessage(player.Nick, text);
+        }
+
+        public JsonResult GetMessagesDelta(int playerId, int lastChatRow)
         {
             _playersService.PingReceived(playerId);
+            return Json(_chatService.GetMessagesDelta(lastChatRow));
         }
     }
 }

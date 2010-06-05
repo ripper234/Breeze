@@ -60,6 +60,12 @@ namespace Breeze.Core.Services
             player.LastPingReceived = DateTime.Now;
         }
 
+        public PlayerData Get(int id)
+        {
+            lock (_allPlayers)
+                return _allPlayers.Get(id);
+        }
+
         public PlayersData GetPlayersInDraft(int draftId)
         {
             throw new NotImplementedException();

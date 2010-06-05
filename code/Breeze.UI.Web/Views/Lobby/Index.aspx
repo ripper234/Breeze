@@ -15,16 +15,18 @@
     <div id="drafts"></div>
     <table id="chattable">
         <tr>
-            <td id="chatmain">Some chat lines</td>
+            <td>
+                <table>
+                <tr><td id="chatmain"></td></tr>
+                <tr ><td><input id="chatline" type="text"/></td></tr>
+                </table>
+            </td>
             <td id="playerslistbox">
                     <p id="playerslistboxtitle"><strong>Players Online</strong></p>
                     <table id="playerslist">
-                    <tr><td>ripper234</td></tr>
-                    <tr><td>Avish</td></tr>
-                    <tr><td>chaoticdawn</td></tr>
+                    <tr><td>Loading players...</td></tr>
                     </table>
             </td>
         </tr>
     </table>
-    <div id="chatline"></div>
 </asp:Content>

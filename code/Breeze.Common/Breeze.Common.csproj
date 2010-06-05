@@ -65,6 +65,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extensions\CollecitonExtenions.cs" />
     <Compile Include="IoC\AutoWireServicesExtensions.cs" />
     <Compile Include="IoC\ImplementedByAttribute.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
