@@ -11,7 +11,7 @@ function startChatClient() {
     window.setInterval(function() {
         try {
             updatePlayersInLoby();
-            updateChatMessage();
+            updateChatMessages();
         }
         catch (e) {
             alert("Error updating chat: " + e);
@@ -23,7 +23,9 @@ function startChatClient() {
         if (event.keyCode == 13) {
             var text = $(this).val();
             $(this).val("");
-            $.post("/Chat/SendMessage", { playerId: getPlayerId(), text: text });
+            $.post("/Chat/SendMessage", { playerId: getPlayerId(), text: text }, function(data) {
+                updateChatMessages();
+            });
         }
     });
 }
@@ -47,7 +49,7 @@ function updatePlayersInLoby() {
 
 lastChatRow = 0;
 
-function updateChatMessage() {
+function updateChatMessages() {
     var playerId = getPlayerId();
     $.get("/Chat/GetMessagesDelta", { playerId: playerId, lastChatRow: lastChatRow }, function(data) {
         try {
