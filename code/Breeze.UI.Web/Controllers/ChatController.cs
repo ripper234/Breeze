@@ -30,7 +30,7 @@ namespace Breeze.UI.Web.Controllers
                 return;
             }
 
-            _chatService.SendMessage(player.Nick, text);
+            _chatService.SendMessage(player.Id, player.Nick, text);
         }
 
         public JsonResult GetMessagesDelta(int playerId, int lastChatRow)

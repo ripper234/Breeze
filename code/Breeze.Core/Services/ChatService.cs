@@ -1,6 +1,4 @@
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using Breeze.Common.Extensions;
 
 namespace Breeze.Core.Services
@@ -10,9 +8,9 @@ namespace Breeze.Core.Services
         private readonly List<ChatMessage> _messages = new List<ChatMessage>();
         private int _oldestRowIndex = 0;
 
-        public void SendMessage(string name, string text)
+        public void SendMessage(int senderId, string senderName, string text)
         {
-            var message = new ChatMessage(name, text);
+            var message = new ChatMessage(senderId, senderName, text);
             lock (_messages)
                 _messages.Add(message);
         }

@@ -44,9 +44,8 @@
     </div>
     
     <fieldset>
-        <%= "<input id='playerid' type='hidden' value='"
-                + Session[SessionConsts.PlayerID]
- 	            + "' />" %>
+        <%= "<input id='playerid' type='hidden' value='" + Session[SessionConsts.PlayerID] + "' />" %>
+        <%= "<input id='playername' type='hidden' value='" + Session[SessionConsts.Nickname] + "' />" %>
     </fieldset>
 </body>
 </html>

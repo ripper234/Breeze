@@ -2,7 +2,7 @@ namespace Breeze.Core.Services
 {
     public interface IChatService
     {
-        void SendMessage(string name, string message);
+        void SendMessage(int senderId, string senderName, string message);
 
         /// <summary>
         /// Get all the messages (delta) since rowIndex

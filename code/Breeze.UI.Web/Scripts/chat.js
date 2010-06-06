@@ -20,12 +20,16 @@ function startChatClient() {
     }, 1000);
 
     $("#chatline").keyup(function(event) {
-        if (event.keyCode == 13) {
+        var ENTER_KEYCODE = 13;
+        if (event.keyCode == ENTER_KEYCODE) {
             var text = $(this).val();
             $(this).val("");
-            $.post("/Chat/SendMessage", { playerId: getPlayerId(), text: text }, function(data) {
+            var playerId = getPlayerId();
+            $.post("/Chat/SendMessage", { playerId: playerId, text: text }, function(data) {
                 updateChatMessages();
             });
+            var messages = { SenderId: 0, SenderName: getPlayerName(), Text: text };
+            updateChatMessagesWith(messages);
         }
     });
 }
@@ -57,11 +61,9 @@ function updateChatMessages() {
                 // this response is stale
                 return;
             }
-            
+
             lastChatRow = data["NewRowIndex"];
-            var chatMain = $('#chatmain');
-            var newChatMainText = chatMain.html() + messagesToText(data["Messages"]);
-            chatMain.html(newChatMainText);
+            updateChatMessagesWith(data["Messages"]);
         }
         catch (e) {
             alert("Error: " + e);
@@ -69,15 +71,28 @@ function updateChatMessages() {
     });
 }
 
+function updateChatMessagesWith(messages) {
+    var chatMain = $('#chatmain');
+    var newChatMainText = chatMain.html() + messagesToText(messages);
+    chatMain.html(newChatMainText);
+}
+
 function messagesToText(messages) {
     var text = "";
     $(messages).each(function() {
-        text += "&lt;" + this["Sender"] + "&gt; ";
+        if (this["SenderId"] == getPlayerId())
+            return;
+            
+        text += "&lt;" + this["SenderName"] + "&gt; ";
         text += this["Text"];
         text += "<br/>";
     });
     return text;
 }
+
 function getPlayerId() {
     return parseInt($('fieldset input#playerid')[0]["value"], 10);
+}
+function getPlayerName() {
+    return $('fieldset input#playername')[0]["value"];
 }
