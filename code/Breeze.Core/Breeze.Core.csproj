@@ -62,7 +62,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\ChatMessage.cs" />
     <Compile Include="Services\ChatService.cs" />
-    <Compile Include="Services\Draft.cs" />
     <Compile Include="Services\DraftManager.cs" />
     <Compile Include="Services\IChatService.cs" />
     <Compile Include="Services\IDraftManager.cs" />

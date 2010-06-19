@@ -37,16 +37,13 @@ function startChatClient() {
 function updatePlayersInLoby() {
     $.get("/Chat/GetPlayersInLobby", function(data) {
         try {
-            var draftsTable = $('<table id="playerslist"></table>');
+            var playersTable = $('<table id="playerslist"></table>');
 
-            $.each(data, function() {
-                draftsTable.append("<tr>");
-                //draftsTable.append("<td>" + this["OwnerName"] + "</td>");
-                draftsTable.append("<td>" + "OwnerName" + "</td>");
-                draftsTable.append("</tr>");
+            $.each(data["Players"], function() {
+                playersTable.append("<tr><td>" + this["Nick"] + "</td></tr>");
             });
 
-            $('#draftsList').replaceWith(playersTable);
+            $('#playerslist').replaceWith(playersTable);
         }
         catch (e) {
             alert("Error: " + e);

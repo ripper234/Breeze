@@ -13,6 +13,7 @@ function startDraftIndicatorRefresher() {
         }
 
     }, 5000);
+    updateOngoingDrafts();
 }
 
 function updateOngoingDrafts() {
@@ -21,15 +22,20 @@ function updateOngoingDrafts() {
             if ($(data).size() == 0)
                 return;
 
-            $(data).each(function(jsonRow) {
-                var row = $('<tr class="draftsrow">').appendTo($('#table'));
-                row.append($('<td>').append($('<strong>').text(feature.featureDescription)));
-                $.each(feature.comparisonValues, function(j, comparisonValue) {
-                    row.append($('<td>').text(comparisonValue));
-                });
+            var draftsTable = $('<table id="draftstable"></table>');
+            var headerRow = '<tr><th>Boosters</th><th>Organizer</th></tr>';
+            draftsTable.append(headerRow);
+            $.each(data, function() {
+                var row = "<tr>";
+                row += "<td>" + this["BoosterAcronyms"].join(", ") + "</td>";
+                row += "<td>" + this["Owner"] + "</td>";
+                row += ("</tr>");
+                draftsTable.append($(row));
             });
-            
-            $('#draftlist').text($(data).size() + " drafts");
+
+            $('#draftlist').html("");
+            $('#draftlist').append("<h2>Ongoing Drafts</h2>");
+            $('#draftlist').append(draftsTable);
         }
         catch (e) {
             alert("Error parsing drafts data: " + e);
@@ -49,8 +55,15 @@ function registerButtons() {
         $('#draftoptions').removeClass('hidden');
     });
     $('#createnewdraft').click(function() {
+        var serialized = $('#createdraft').serialize();
         var ownerId = getPlayerId();
-        var options = null; // todo
+        var options =
+        {
+            Title: $('#DraftOptions.Title').text(),
+            PickTime: $('#DraftOptions.PickTime').text(),
+            Players: $('#DraftOptions.Players').text(),
+            Packs: getPacks()
+        };
 
         $('#createnewdraft').attr("disabled", true);
         try {
@@ -69,4 +82,12 @@ function registerButtons() {
 function hideCreateDraftDialog() {
     $('#togglecreate').text("Create New Draft");
     $('#draftoptions').addClass('hidden');            
+}
+
+function getPacks() {
+    return {
+        Pack: $('DraftOptions.Pack1').data(),
+        Pack: $('DraftOptions.Pack2').data(),
+        Pack: $('DraftOptions.Pack3').data()
+    }
 }

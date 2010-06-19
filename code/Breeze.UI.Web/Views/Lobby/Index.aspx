@@ -18,27 +18,31 @@
         <div id="draftlist"></div>
         <button id="togglecreate">Create New Draft</button>
         <div id="draftoptions" class="hidden">
-            <h2>Title</h2>
-            <input id="DraftOptions.Title" value="No meaningful title"/>
-            
-            <h2>Packs</h2>
-            <select id="DraftOptions.Pack1">
-                <option value="roe">Rise of the Eldrazi</option>
-            </select>
-            <select id="DraftOptions.Pack2">
-                <option value="roe">Rise of the Eldrazi</option>
-            </select>
-            <select id="DraftOptions.Pack3">
-                <option value="roe">Rise of the Eldrazi</option>
-            </select>
-            
-            <h2>Pick Time</h2>
-            <input id="DraftOptions.PickTime" value="60"/>
-            
-            <h2>Players</h2>
-            <input id="DraftOptions.Players" value="8"/>
-            
-            <button id="createnewdraft">Create!</button>
+            <form id="createdraft">
+                <fieldset>
+                    <h2>Title</h2>
+                    <input id="DraftOptions.Title" value="No meaningful title"/>
+                    
+                    <h2>Packs</h2>
+                    <select id="DraftOptions.Pack1">
+                        <option value="roe">Rise of the Eldrazi</option>
+                    </select>
+                    <select id="DraftOptions.Pack2">
+                        <option value="roe">Rise of the Eldrazi</option>
+                    </select>
+                    <select id="DraftOptions.Pack3">
+                        <option value="roe">Rise of the Eldrazi</option>
+                    </select>
+                    
+                    <h2>Pick Time</h2>
+                    <input id="DraftOptions.PickTime" value="60"/>
+                    
+                    <h2>Players</h2>
+                    <input id="DraftOptions.Players" value="8"/>
+                    
+                    <button id="createnewdraft">Create!</button>
+                </fieldset>
+            </form>
         </div>
     </div>
     <table id="chattable">

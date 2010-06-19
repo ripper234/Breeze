@@ -45,10 +45,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataObjects\Draft.cs" />
     <Compile Include="DataObjects\DraftOptions.cs" />
     <Compile Include="DataObjects\Expansion.cs" />
     <Compile Include="DataObjects\PlayerData.cs" />
     <Compile Include="DataObjects\PlayersData.cs" />
+    <Compile Include="Dtos\DraftDto.cs" />
+    <Compile Include="Dtos\DraftOptionsDto.cs" />
     <Compile Include="Dtos\PlayerDto.cs" />
     <Compile Include="Dtos\PlayersDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

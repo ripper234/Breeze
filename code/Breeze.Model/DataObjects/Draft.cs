@@ -1,11 +1,14 @@
-using Breeze.Model.DataObjects;
+using System;
 
-namespace Breeze.Core.Services
+namespace Breeze.Model.DataObjects
 {
     public class Draft
     {
         public Draft(int draftId, int ownerId, DraftOptions options)
         {
+            if (options == null)
+                throw new NullReferenceException("options");
+
             DraftId = draftId;
             Options = options;
             OwnerId = ownerId;
