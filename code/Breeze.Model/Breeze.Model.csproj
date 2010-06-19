@@ -45,6 +45,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataObjects\DraftOptions.cs" />
+    <Compile Include="DataObjects\Expansion.cs" />
     <Compile Include="DataObjects\PlayerData.cs" />
     <Compile Include="DataObjects\PlayersData.cs" />
     <Compile Include="Dtos\PlayerDto.cs" />
