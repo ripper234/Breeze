@@ -76,6 +76,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BreezeControllerBase.cs" />
     <Compile Include="Controllers\ChatController.cs" />
+    <Compile Include="Controllers\DraftController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LobbyController.cs" />
     <Compile Include="Global.asax.cs">
@@ -89,6 +90,7 @@
     <Content Include="castle.xml" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\chat.js" />
+    <Content Include="Scripts\common.js" />
     <Content Include="Scripts\drafts.js" />
     <Content Include="Scripts\lib\jquery-1.4.2.min.js" />
     <Content Include="Scripts\lib\jquery-ui\cupertino\images\ui-bg_diagonals-thick_90_eeeeee_40x40.png" />

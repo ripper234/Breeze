@@ -2,6 +2,7 @@
 <%@ Import Namespace="Breeze.UI.Web.Utils"%>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="HeadContent" runat="server">
+    <script type="text/javascript" src="../../Scripts/common.js"></script>
 	<script type="text/javascript" src="../../Scripts/chat.js"></script>
 	<script type="text/javascript" src="../../Scripts/drafts.js"></script>
 </asp:Content>

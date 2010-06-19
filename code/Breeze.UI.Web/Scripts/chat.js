@@ -37,13 +37,16 @@ function startChatClient() {
 function updatePlayersInLoby() {
     $.get("/Chat/GetPlayersInLobby", function(data) {
         try {
-            var playersTable = $('<table id="playerslist"></table>');
+            var draftsTable = $('<table id="playerslist"></table>');
 
-            $.each(data["Players"], function() {
-                playersTable.append("<tr><td>" + this["Nick"] + "</td></tr>");
+            $.each(data, function() {
+                draftsTable.append("<tr>");
+                //draftsTable.append("<td>" + this["OwnerName"] + "</td>");
+                draftsTable.append("<td>" + "OwnerName" + "</td>");
+                draftsTable.append("</tr>");
             });
 
-            $('#playerslist').replaceWith(playersTable);
+            $('#draftsList').replaceWith(playersTable);
         }
         catch (e) {
             alert("Error: " + e);
@@ -88,11 +91,4 @@ function messagesToText(messages) {
         text += "<br/>";
     });
     return text;
-}
-
-function getPlayerId() {
-    return parseInt($('fieldset input#playerid')[0]["value"], 10);
-}
-function getPlayerName() {
-    return $('fieldset input#playername')[0]["value"];
 }

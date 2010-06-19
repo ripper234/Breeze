@@ -13,10 +13,10 @@ namespace Breeze.Core.Services
             _idService = idService;
         }
 
-        public int Create(DraftOptions options)
+        public int Create(int ownerId, DraftOptions options)
         {
             int draftId = _idService.CreateID();
-            var draft = new Draft(draftId, options);
+            var draft = new Draft(draftId, ownerId, options);
             lock (_drafts)
                 _drafts[draftId] = draft;
 

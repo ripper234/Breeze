@@ -4,13 +4,15 @@ namespace Breeze.Core.Services
 {
     public class Draft
     {
-        public Draft(int id, DraftOptions options)
+        public Draft(int draftId, int ownerId, DraftOptions options)
         {
-            Id = id;
+            DraftId = draftId;
             Options = options;
+            OwnerId = ownerId;
         }
 
-        public int Id {get; private set;}
+        public int DraftId {get; private set;}
+        public int OwnerId { get; private set; }
         public DraftOptions Options { get; set; }
     }
 }

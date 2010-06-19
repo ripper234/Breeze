@@ -1,4 +1,5 @@
-﻿using Breeze.Model.DataObjects;
+﻿using System.Collections.Generic;
+using Breeze.Model.DataObjects;
 
 namespace Breeze.Core.Services
 {
@@ -7,8 +8,11 @@ namespace Breeze.Core.Services
         /// <summary>
         /// Returns the draft id
         /// </summary>
+        /// <param name="ownerId"></param>
         /// <param name="options"></param>
         /// <returns></returns>
-        int Create(DraftOptions options);
+        int Create(int ownerId, DraftOptions options);
+
+        IList<Draft> GetAll();
     }
 }
